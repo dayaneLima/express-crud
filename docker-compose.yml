@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  typescript-backend:
+    platform: linux/x86_64
+    container_name: typescript-backend
+    build:
+      context: ./
+      # target: "production"
+      target: "development"
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    networks: 
+      - local
+
+networks: 
+  local:
+    name: local

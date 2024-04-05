@@ -1,0 +1,5 @@
+# Comandos
+Compilar os arquivos .ts para .js:
+npx tsc server.ts src/app.ts  
+ou para compilar tudo 
+npx tsc
